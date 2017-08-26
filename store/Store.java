@@ -30,6 +30,7 @@ public class Store  {
   public void addBasket(Basket t) {
   
     baskets.add(t);
+    t.getCustomer();  t.getItem(); t.getPrice();
     // t.getCustomer().spendMoney(t.getAmount(), t.getPaymentMethod());
 
   }
@@ -40,6 +41,7 @@ public class Store  {
 
   public void subtractBasket(Basket t) {
     baskets.add(t);
+    t.getCustomer();  t.getItem(); t.getPrice();
     // t.getCustomer().refundMoney(t.getAmount(), t.getPaymentMethod());
 
    }
@@ -53,8 +55,8 @@ public class Store  {
     BigDecimal sum = BigDecimal.ZERO;
 
     for (int i = 0; i < this.baskets.size(); i++) {
-      // sum = sum.add(this.baskets.get(i).getAmount());
-    
+    sum = sum.add(this.baskets.get(i).getPrice());
+
     }
      
     return sum.add(this.initialBalance);

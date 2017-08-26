@@ -9,8 +9,7 @@ public class Basket {
   private Customer customer;
   private String     item;
   private BigDecimal price;
-  // private String     item2;
-  // private BigDecimal price2;
+  
 
 
 
@@ -20,6 +19,7 @@ public class Basket {
     this.item = item;
     this.price = price;
     this.customer = cust;
+
     // this.item2 = item2;
     // this.price2 = price2;
   }
@@ -36,6 +36,8 @@ public class Basket {
   public BigDecimal getPrice() {
     return this.price;
   }
+
+
 
   // public String getItem2() {
   //    return this.item2;

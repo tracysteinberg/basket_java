@@ -23,14 +23,14 @@ public class StoreTest {
       customer = new Customer("Alex", new BigDecimal("50.00"), new Boolean(true));
 
       item1 = new Basket("Bananas", new BigDecimal("0.99"), customer);
-      item2 = new Basket("Bread", new BigDecimal("1.50"), customer);
+      item2 = new Basket("Bread", new BigDecimal("-1.50"), customer);
     
     }
 
 
     @Test
        public void storeCanMakeSale() {
-       // totValue.addBasket(item1);
+       totValue.addBasket(item1);
        BigDecimal expected = new BigDecimal("0.99");
        assertEquals(expected, totValue.getBalance());
       } 
@@ -38,8 +38,8 @@ public class StoreTest {
 
     @Test
        public void storeCanReturn() {
-       // totValue.addBasket(item1);
-       // totValue.subtractBasket(item2);
+       totValue.addBasket(item1);
+       totValue.subtractBasket(item2);
        BigDecimal expected = new BigDecimal("-0.51");
        assertEquals(expected, totValue.getBalance());
     }
