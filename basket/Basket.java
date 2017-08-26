@@ -3,12 +3,14 @@ package basket;
 import java.math.BigDecimal;
 import java.util.*;
 import customer.*;
+import store.*;
 
 public class Basket {
 
   private Customer customer;
   private String     item;
   private BigDecimal price;
+  private BigDecimal discount;
   
 
 
@@ -19,6 +21,7 @@ public class Basket {
     this.item = item;
     this.price = price;
     this.customer = cust;
+   
 
     // this.item2 = item2;
     // this.price2 = price2;
@@ -39,13 +42,6 @@ public class Basket {
 
 
 
-  // public String getItem2() {
-  //    return this.item2;
-  // }
-
-  // public BigDecimal getPrice2() {
-  //   return this.price2;
-  // }
 
   
 } 

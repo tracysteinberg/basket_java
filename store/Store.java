@@ -8,14 +8,16 @@ import customer.*;
 import store.*;
 
 
-public class Store  {
+public class Store implements Calc2 {
 
   
   private ArrayList<Basket> baskets;
   private BigDecimal initialBalance;
+  public BigDecimal discount;
 
-  public Store(BigDecimal initialBalance) {
+  public Store(BigDecimal initialBalance, BigDecimal discount) {
     this.initialBalance = initialBalance;
+    this.discount = discount;
     this.baskets = new ArrayList<Basket>();
   }
 
@@ -37,11 +39,11 @@ public class Store  {
 
 
 
-//   refunds
+//   discounts
 
   public void subtractBasket(Basket t) {
     baskets.add(t);
-    t.getCustomer();  t.getItem(); t.getPrice();
+    t.getCustomer();  t.getItem(); t.getPrice().subtract(percentDiscount); 
     // t.getCustomer().refundMoney(t.getAmount(), t.getPaymentMethod());
 
    }

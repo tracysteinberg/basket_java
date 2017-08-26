@@ -29,7 +29,7 @@ public class BasketTest {
        item2 = new Basket("Bread", new BigDecimal("1.50"), customer);
 
 
-       totValue = new Store(new BigDecimal("0"));
+       totValue = new Store(new BigDecimal("0"), new BigDecimal("0"));
        
    }
 

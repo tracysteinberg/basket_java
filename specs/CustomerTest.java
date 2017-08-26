@@ -1,10 +1,10 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import customer.*;
-// import transaction.*;
-// import store.*;
+import basket.*;
+import store.*;
 import java.math.BigDecimal;
-import java.util.HashMap;
+// import java.util.HashMap;
 
 public class CustomerTest {
 
