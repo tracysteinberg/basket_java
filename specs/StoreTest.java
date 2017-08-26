@@ -12,6 +12,7 @@ public class StoreTest {
    Store totValue;
    Basket item1;
    Basket item2;
+   Basket item3;
    Customer customer;
 
   
@@ -24,6 +25,7 @@ public class StoreTest {
 
       item1 = new Basket("Bananas", new BigDecimal("0.99"), customer);
       item2 = new Basket("Bread", new BigDecimal("-1.50"), customer);
+      item3 = new Basket("Bananas", new BigDecimal("0.00"), customer);
     
     }
 
@@ -44,5 +46,13 @@ public class StoreTest {
        assertEquals(expected, totValue.getBalance());
     }
 
+
+    @Test
+       public void bogof() {
+       totValue.addBasket(item1);
+       totValue.addBasket(item3);
+       BigDecimal expected = new BigDecimal("0.99");
+       assertEquals(expected, totValue.getBalance());
+    }
 
 } 
